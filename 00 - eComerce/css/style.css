@@ -12,8 +12,9 @@ body {
     line-height: 2; /* interlineado */
 }
 
+/*<<<<<<<<<<<<<<<<<<<<<<<<<<<<<<<<<<<<<<<<<<<<<<<<<<<<<<<<<<<<<<<<<<<<<<<<<<<<<<<<<<<<<<<<<*/
 /* Globales */
-/* Elementos que aplican a todo el proyecto */
+/* (Elementos que aplican a todo el proyecto) */
 
 h1, h2, h3 {
     font-family: 'Playfair Display', serif;
@@ -47,7 +48,28 @@ img {
     display: block;
 }
 
+.btn { /*  tipo de Boton y evento asociado a el*/
+    background-color: #8cbc00;
+    display: block; /* Se expande todo a lo ancho*/
+    color: #FFF;
+    text-transform: uppercase;
+    font-weight: 900; /* define grosor texto*/
+    padding: 1rem;
+    transition: background-color .3s ease-out;
+}
 
+.btn:hover { /*Hover = evento en CSS ( En este caso un cambio de color)*/
+    background-color: #769c02;
+}
+
+/*<<<<<<<<<<<<<<<<<<<<<<<<<<<<<<<<<<<<<<<<<<<<<<<<<<<<<<<<<<<<<<<<<<<<<<<<<<<<<<<<<<<<<<<<<*/
+/* Utilidades */
+
+.text-center {
+    text-align: center;
+}
+
+/*<<<<<<<<<<<<<<<<<<<<<<<<<<<<<<<<<<<<<<<<<<<<<<<<<<<<<<<<<<<<<<<<<<<<<<<<<<<<<<<<<<<<<<<<<*/
 /* Header y Navegación */
 
 .nombre-sitio {
@@ -78,6 +100,7 @@ img {
     height:  55rem;
 }
 
+/*<<<<<<<<<<<<<<<<<<<<<<<<<<<<<<<<<<<<<<<<<<<<<<<<<<<<<<<<<<<<<<<<<<<<<<<<<<<<<<<<<<<<<<<<<*/
 /** Categorías **/
 
 .categorias {
@@ -107,3 +130,154 @@ img {
     gap: 2rem;
 }
 
+/*<<<<<<<<<<<<<<<<<<<<<<<<<<<<<<<<<<<<<<<<<<<<<<<<<<<<<<<<<<<<<<<<<<<<<<<<<<<<<<<<<<<<<<<<<*/
+/* Bloque Nosostros */
+
+.sobre-nosotros {
+    background-image: linear-gradient(to right, transparent 50%, #037bc0 50%,
+    #037bc0 100%), url(../img/nosotros.jpg); /* permite varios elementos a la vez*/
+    background-position: left center;
+    padding: 10rem 0rem; /* Forma abreviada de código */
+    background-repeat: no-repeat;
+    background-size: 100%, 120rem; /* Tamaño: 1º valor degradado, 2ºvalor imagen */
+    margin-top: 5rem;
+}
+
+.sobre-nosotros-grid {
+    display: flex;
+    justify-content: flex-end; /*Dfinimos la posición contenido*/
+
+}
+
+.texto-nosotros {
+    flex-basis: 50%; /*Definimos el espacio ocupado por el contenido*/
+    padding-left: 10rem;
+    color: #FFF;
+}
+
+/*<<<<<<<<<<<<<<<<<<<<<<<<<<<<<<<<<<<<<<<<<<<<<<<<<<<<<<<<<<<<<<<<<<<<<<<<<<<<<<<<<<<<<<<<<*/
+/* main */
+/* Listado de Productos */
+
+.contenido-principal {
+    padding-top: 5rem;
+
+}
+
+/* Definimos layout*/
+.listado-productos {
+    display: grid;
+    grid-template-columns: repeat(6, 1fr); /*6 columna con el mismo tamaño*/
+    gap: 2rem;
+
+}
+
+/* Definimos el espacio ocupado por cada producto dentro de la regilla grid*/
+/* ntch-child() = permite seleccionar el elemento definido entre ()*/
+
+.producto:nth-child(1) { /*Producto 1*/
+    grid-column-start: 1;
+    grid-column-end: 7;
+    display: grid; /*Creamos un grid dentro de producto*/
+    grid-template-columns: 3fr 1fr; /*Repartimos el espacio (fr = fracciones)*/
+
+}
+
+.producto:nth-child(1) img{ /*Damos formato a la imagen*/
+    height: 50rem;
+    width: 100%;
+    object-fit: cover; /*mantiene la proporcion de tamaño cuando varia el tamaño de la ventan*/
+
+}
+
+.producto:nth-child(2) { /*Producto 2*/
+    grid-column-start: 1;
+    grid-column-end: 4;
+
+}
+
+.producto:nth-child(2) img,
+.producto:nth-child(3) img {
+    height: 30rem;
+    width: 100%;
+    object-fit: cover;
+}
+
+.producto:nth-child(3) { /*Producto 3*/
+    grid-column-start: 4;
+    grid-column-end: 7;
+
+}
+
+
+.producto:nth-child(4) { /*Producto 4*/
+    grid-column-start: 1;
+    grid-column-end: 3;
+
+}
+
+.producto:nth-child(5) { /*Producto 5*/
+    grid-column-start: 3;
+    grid-column-end: 5;
+
+}
+
+.producto:nth-child(6) { /*Producto 6*/
+    grid-column-start: 5;
+    grid-column-end: 7;
+
+}
+
+.producto  {
+    background-color: #037bc0;
+
+}
+
+.texto-producto {
+    text-align: center;
+    color: #FFF;
+    padding: 2rem;
+
+}
+
+.texto-producto h3 {
+    margin: 0;
+}
+
+.texto-producto p {
+    margin: 0 0 0.5rem 0;
+}
+
+.texto-producto .precio {
+    font-size: 2.8rem;
+    font-weight: 900; /* define grosor texto*/
+}
+
+/*<<<<<<<<<<<<<<<<<<<<<<<<<<<<<<<<<<<<<<<<<<<<<<<<<<<<<<<<<<<<<<<<<<<<<<<<<<<<<<<<<<<<<<<<<*/
+/* Footer */
+
+.site-footer {
+    border-top: 1px solid #e1e1e1;
+    margin-top: 5rem;
+    padding: 5rem;
+}
+
+.site-footer h3 {
+    margin-bottom: .5rem;
+}
+
+.grid-footer {
+    display: grid;
+    grid-template-columns: repeat(3, 1fr);
+    gap: 2rem;
+}
+
+.footer-menu a {
+    display: block;
+
+}
+
+.copy-right {
+    text-align: center;
+    margin-top: 5rem;
+}
