@@ -1,0 +1,109 @@
+html {
+    box-sizing: border-box; /* si agremos un padding evita cambiar el tamño de ese elemento*/
+    font-size: 62.5%; /* convierte 1rem = 10 px */
+  }
+  *, *:before, *:after {
+    box-sizing: inherit;
+}
+
+body {
+    font-family: 'Raleway', sans-serif; /* fuente del proyecto */
+    font-size: 1.6rem; /* para que la base sean 16px */
+    line-height: 2; /* interlineado */
+}
+
+/* Globales */
+/* Elementos que aplican a todo el proyecto */
+
+h1, h2, h3 {
+    font-family: 'Playfair Display', serif;
+    margin: 0 0 5rem 0; /* Eliminar margenes a los headings */
+}
+
+h1{
+    font-size: 5rem;
+}
+
+h2 {
+    font-size: 4rem;
+}
+
+h3 {
+    font-size: 3rem;
+}
+
+a {
+    text-decoration: none;
+    color: #000;
+}
+
+.contenedor{
+    max-width: 120rem;
+    margin: 0 auto;   
+}
+
+img {
+    max-width: 100%;
+    display: block;
+}
+
+
+/* Header y Navegación */
+
+.nombre-sitio {
+    margin-top: 5rem;
+    text-align: center; 
+}
+
+.nombre-sitio span {
+    color: #037bc0
+}
+
+.contenedor-navegacion {
+    border-top: .1rem solid #e1e1e1;
+}
+
+.nav-principal {
+    padding: 2rem 0px;
+    display: flex;
+    justify-content: space-between;
+               
+}
+
+.hero{
+    background-image: url(../img/principal.jpg);
+    background-repeat: no-repeat;
+    background-size: cover;
+    background-position: center center;
+    height:  55rem;
+}
+
+/** Categorías **/
+
+.categorias {
+    padding-top: 5rem;
+}
+
+.categorias h2 {
+    text-align: center;
+}
+
+.categoria a {
+    text-align: center;
+    display: block;
+    padding: 2rem;
+    font-size: 2rem;
+}
+
+.categoria a:hover { /** Creamos un evento en los enlaces**/
+    background-color: #037bc0;
+    color: #FFFFFF;
+    border-bottom-right-radius: 1rem;   
+}
+
+.listado-categorias {
+    display: grid;
+    grid-template-columns: repeat(3, 1fr);
+    gap: 2rem;
+}
+
