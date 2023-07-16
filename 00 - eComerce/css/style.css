@@ -281,3 +281,19 @@ img {
     text-align: center;
     margin-top: 5rem;
 }
+
+/*<<<<<<<<<<<<<<<<<<<<<<<<<<<<<<<<<<<<<<<<<<<<<<<<<<<<<<<<<<<<<<<<<<<<<<<<<<<<<<<<<<<<<<<<<*/
+/* Pagina - Nosotros */
+.contenido-nosotros {
+    display: grid;
+    grid-template-columns: 1fr 2fr;
+    grid-template-columns: repeat(auto-fit, minmax(25rem, 1fr)); /*funcion cuando sea menor de 25rem la imagen, ocupar 1fr cada div*/
+    gap: 4rem;
+
+}
+
+.informacion-nosotros {
+    display: flex;
+    flex-direction: column;
+    justify-content: center;
+}
