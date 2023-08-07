@@ -1,0 +1,168 @@
+<!DOCTYPE html>
+<html lang="en">
+
+<head>
+    <meta charset="UTF-8">
+    <meta http-equiv="X-UA-Compatible" content="IE=edge">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Contacto</title>
+    <link rel="stylesheet" href="css/normalize.css">
+    <link rel="preconnect" href="https://fonts.googleapis.com">
+    <link rel="preconnect" href="https://fonts.gstatic.com" crossorigin>
+    <link
+        href="https://fonts.googleapis.com/css2?family=Playfair+Display:wght@700&family=Raleway:wght@400;700;900&display=swap"
+        rel="stylesheet">
+    <link rel="stylesheet" href="css/style.css">
+</head>
+
+<body>
+    <header>
+        <h1 class="nombre-sitio">Tienda <span>Muebles</span></h1>
+    </header>
+
+    <div class="contenedor-navegacion">
+        <nav class="nav-principal contenedor">
+            <a href="index.html">Inicio</a>
+            <a href="nosotros.html">Nosotros</a>
+            <a href="tienda.html">Tienda</a>
+            <a href="blog.html">blog</a>
+            <a href="galeria.html">galería</a>
+            <a href="contacto.html">contacto</a>
+        </nav>
+    </div>
+
+
+
+    <main class="contenido-principal contenedor">
+        <h2 class="text-center">Contacto</h2>
+
+        <form class="formulario"><!-- se usa para crear formularios -->
+
+            <fieldset> <!-- se usa para agrupar datos por temática -->
+                <legend>Tus Datos</legend><!-- añade una etiqueta que identifica el fielset-->
+
+                <div class="campo">
+                    <label for="nombre">Nombre: </label>
+                    <input id="nombre" type="text" placeholder="Escribe tu nombre" required />
+                </div>
+
+                <div class="campo">
+                    <label for="asunto">Asunto: </label>
+                    <input id="asunto" type="text" placeholder="Tu asunto" />
+                </div>
+
+                <div class="campo">
+                    <label for="email">Email: </label>
+                    <input id="email" type="email" placeholder="Tu email" />
+                </div>
+
+                <div class="campo">
+                    <label for="tel">Teléfono: </label>
+                    <input id="tel" type="tel" placeholder="Tu teléfono" />
+                </div>
+
+                <div class="campo">
+                    <label for="tel">Menjase: </label>
+                    <textarea name="" id="" cols="30" rows="10"></textarea>
+                </div>
+            </fieldset>
+
+            <fieldset>
+
+                <legend>País</legend>
+                <div class="campo">
+                    <label for="pais">País</label>
+                    <select id="pais">
+                        <option value>--Seleccionar--</option>
+                        <option value="MX">México</option>
+                        <option value="PR">Perú</option>
+                        <option value="Es">España</option>
+                        <option value="AR">Argentina</option>
+                        <option value="CO">Colombia</option>
+                        <option value="EC">Ecuador</option>
+                        <option value="CH">Chile</option>
+                        <option value="PT">Portugal</option>
+                    </select>
+
+                </div>
+            </fieldset>
+
+            <fieldset>
+                <legend>Infoirmación extra</legend>
+
+                <div class="campo">
+                    <label for="cliente">Cliente</label>
+                    <input id="cliente" type="radio" name="tipo" value="cliente">
+                    <!-- name: se usa para hablitar la propiedad de seleccionar solo un radio-buttom -->
+                    <!-- value: aquí va la información que se envia al servidor -->
+                </div>
+
+                <div class="campo">
+                    <label for="proveedor">Proveedor</label>
+                    <input id="proveedor" type="radio" name="tipo" value="proveedor">
+                    <!-- name: se usa para hablitar la propiedad de seleccionar solo un radio-buttom -->
+                    <!-- value: aquí va la información que se envia al servidor -->
+                </div>
+
+                <div class="campo">
+                    <label for="categoria">Categoría de interés</label>
+                    <input list="categorias" name="categorías">
+                    <datalist id="categorias">
+                        <option value="Cocina"></option>
+                        <option value="Exterior"></option>
+                        <option value="Baño"></option>
+                        <option value="Oficina"></option>
+                        <option value="Dormitorio"></option>
+                    </datalist>
+                </div>
+
+
+            </fieldset>
+
+            <input class="btn" type="submit" value="Envíar Formulario">
+
+        </form>
+
+    </main>
+
+
+    <footer class="site-footer">
+        <div class="grid-footer contenedor">
+            <div>
+                <h3>Categorías</h3>
+                <nav class="footer-menu">
+                    <a href="#">Oficina</a>
+                    <a href="#">Jardin</a>
+                    <a href="#">Cochera</a>
+                    <a href="#">Dormitorios</a>
+                </nav>
+            </div>
+
+            <div>
+                <h3>Sobre Nosotros</h3>
+                <nav class="footer-menu">
+                    <a href="#">Nuestra historia</a>
+                    <a href="#">Mision y valores</a>
+                    <a href="#">Carreras</a>
+                    <a href="#">Política de privacidad</a>
+                    <a href="#">Terminos de servicio</a>
+                </nav>
+            </div>
+
+            <div>
+                <h3>Soporte</h3>
+                <nav class="footer-menu">
+                    <a href="#">Preguntas frecuentes</a>
+                    <a href="#">Ayuda en línea</a>
+                    <a href="#">Confianza y seguridad</a>
+                </nav>
+            </div>
+        </div>
+        <p class="copy-right">
+            Todos los derechos reservados.
+        </p>
+    </footer>
+
+</body>
+
+</html>
