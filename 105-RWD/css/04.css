@@ -1,0 +1,18 @@
+.oferta{
+    background-color: #00446e;
+    padding: 2rem;
+    text-align: center;    
+}
+
+.precio {
+    font-size: 6rem;
+    margin: 0;
+}
+
+/* ancho entre 600px o 800px*/
+@media(min-width: 600px) and (max-width: 800px), (max-width: 1200px){
+    .oferta{
+        background-color: yellow;
+    }
+
+}

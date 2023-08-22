@@ -1,0 +1,10 @@
+/* Selector de primera letra*/
+.primer-letra::first-letter{
+    font-size: 20rem;
+}
+
+/* Selector primer linea */
+.primer-linea::first-line{
+    font-size: 4rem;
+
+}

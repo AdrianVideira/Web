@@ -1,0 +1,10 @@
+/* Seleccionar todos los elementos excepto uno o unos*/
+/* Selecciona todos los parrafos excepto el de la clase .texto*/
+p:not(.texto){
+    color: red
+}
+
+/* para excluir varios elementos */
+p:not(.texto):not(.oferta) {
+    color: red;
+}

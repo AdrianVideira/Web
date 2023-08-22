@@ -1,0 +1,12 @@
+img {
+    max-width: 100%;
+    display: block;/* Para eliminar la pequeña separación inferior que
+    traen por defecto las imagenes*/
+   
+
+}
+
+p {
+    background-color: red;
+    margin: 0 auto;
+}

@@ -1,0 +1,9 @@
+/* Selector ultimo hijo de la lista */
+ul li:last-child{
+    border: 2px solid red;
+}
+
+/* Otra opción */
+ul li:last-of-type{
+    border: 2px solid red;
+}

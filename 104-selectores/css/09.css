@@ -1,0 +1,4 @@
+/* Selector primer elemento después */
+.admin div + p{
+    background-color: red;
+}
