@@ -1,0 +1,125 @@
+/* Propiedades del proyecto */
+/* Custom properties = vairables creadas por nosotros (--nombre: variable) */
+:root { 
+    --colorPrimario:#1073BA;
+    --colorSecundario: #00DA55;
+    --gris: #3B3B3B;
+    --blanco: #FFFFFF;
+    --negro: #1F1E1E;
+    --grisClaro: #e1e1e1;
+    
+    --separacion: 5rem;
+
+    --fuentePrincipal: 'Roboto', sans-serif;
+    --fuenteSecundaria: 'Lato', sans-serif;   
+}
+
+html {
+    box-sizing: border-box; /* si agremos un padding evita cambiar el tamño de ese elemento*/
+    font-size: 62.5%; /* convierte 1rem = 10 px */
+  }
+  *, *:before, *:after {
+    box-sizing: inherit;
+}
+
+body{
+    font-family: var(--fuentePrincipal);
+    font-size: 1.6rem;
+    line-height: 1.5; /* Distancia interlineado */
+}
+
+/*<<<<<<<<<<<<<<<<<<<<<<<<<<<<<<<<<<<<<<<<<<<<<<<<<<<<<<<<<<<<<<<<<<<<<<<<<<<<<<<<<<<<<<<<<*/
+/* Globales */
+.contenedor {
+    max-width: 120rem; /* tamaño maximo del contenedor */
+    width: 90%; /* Toma el 90% del tamaño disponible sin pasar del max-width: 120 rem*/
+    margin: 0 auto;
+}
+
+h1, h2, h3 {
+    font-weight: 900;
+    font-family: var(--fuenteSecundaria);
+    margin: calc( var(--separacion)/2) 0;
+}
+
+h1{
+    font-size: 4.4rem;
+}
+
+h2{
+    font-size: 3.6rem;
+}
+
+h3{
+    font-size: 2.8rem;
+}
+
+img { /* Con esto evitamos el desbordamiento de las imagenes */
+    max-width: 100%;
+    display: block;
+    height: auto;
+}
+/*<<<<<<<<<<<<<<<<<<<<<<<<<<<<<<<<<<<<<<<<<<<<<<<<<<<<<<<<<<<<<<<<<<<<<<<<<<<<<<<<<<<<<<<<<*/
+/* Utilidades */
+.text-center{
+    text-align: center;
+}
+
+/*<<<<<<<<<<<<<<<<<<<<<<<<<<<<<<<<<<<<<<<<<<<<<<<<<<<<<<<<<<<<<<<<<<<<<<<<<<<<<<<<<<<<<<<<<*/
+/* Header */
+.header{
+    background-color: var(--negro);
+    padding: calc( var(--separacion) * 3) 0;
+    color: var(--blanco);
+}
+
+@media (min-width: 768px) { 
+    .contenido-header{
+      display: grid;
+      grid-template-columns: repeat(2, 1fr);        
+    }
+}
+.texto-header{
+    text-align: center;
+    padding-top: var(--separacion);
+    
+}
+
+@media (min-width: 768px) { 
+    .texto-header{
+        text-align: left;
+        display: flex;
+        flex-direction: column;
+        justify-content: space-between;
+        padding: 0;
+    }
+}
+.texto-header p{
+    margin: 0;
+}
+
+.tagline-producto{
+    font-size: 3rem;
+    font-weight: 900;
+   
+}
+.nombre-producto{
+    font-size: 6rem;    
+}
+
+@media (min-width: 768px) { 
+    .nombre-producto{
+        font-size: 10rem;
+        margin: 0;
+        line-height: 1; /* Elimina el interlineado */
+    }
+}
+
+.precio-producto span{
+    font-size: 6rem;
+    font-weight: 900;
+    color: red;
+}
+
+
+
