@@ -308,4 +308,74 @@ img { /* Con esto evitamos el desbordamiento de las imagenes */
     font-size: 6rem;
 }
 
+/* Seccion - Newsletter*/
+.newsletter{
+    background-image: linear-gradient( to bottom, transparent 50%, var(--blanco) 0%), url(../img/newsletter.jpg);
+    background-position: center top;
+    background-repeat: no-repeat;
+    background-size: 100%, 80rem;/* imagen / zoom */
+      
+}
 
+@media (min-width: 769px) { 
+    .newsletter{
+        background-image: linear-gradient( to right, transparent 50%, var(--blanco) 0%), url(../img/newsletter.jpg);
+        background-position: center, -21rem -0rem;
+        background-size: 100%, 100rem;
+        padding: 10rem 0;
+    }
+    
+}
+
+.contenido-newsletter{
+   display: grid;
+   grid-template-rows: repeat(2, 40rem);
+   gap: var(--separacion);
+}
+
+@media (min-width: 769px) { 
+    .contenido-newsletter{
+        grid-template-rows: unset;
+        grid-template-columns: repeat(2, 1fr);
+    }
+}
+
+.texto-newsletter{
+    grid-row: 2 / 3;
+}
+
+@media (min-width: 769px) {
+    .texto-newsletter{
+        grid-row: unset;
+        grid-column: 2 / 3;
+    }
+    
+}
+
+.formulario input[type="text"]{
+    width: 100%;
+    height: 5rem;
+    margin-bottom: 2rem;
+
+}
+
+.formulario input[type="submit"]{
+    width: 100%;
+    padding: 2rem;
+    background-color: var(--colorPrimario);
+    color: var(--blanco);
+    text-transform: uppercase;
+    font-size: 2rem;
+    font-weight: 600;
+    border: none;
+}
+
+.footer p {
+    text-align: center;
+    font-family: var(--fuenteSecundaria);
+    text-transform: uppercase;
+    font-size: 1.5rem;
+    color: var(--colorPrimario);
+    font-weight: 900;
+    padding: 5rem;
+}
