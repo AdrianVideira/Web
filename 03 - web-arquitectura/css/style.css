@@ -1,0 +1,79 @@
+/* Custom properties: Propiedades creadas por nosotros (--nombre: variable) */
+:root{
+    --blanco: #FFF;
+    --negro: #111111;
+    --gris: #343A40;
+
+    --fuentePrincipal: 'Raleway', sans-serif;
+}
+
+/* GLOBALES */
+
+html{
+    font-size: 62.5%; /* convierte 1rem = 10 px */ 
+    box-sizing: border-box; /* si agremos un padding evita cambiar el tamño de ese elemento*/
+}
+
+*, *:before, *:after {
+    box-sizing: inherit;
+}
+
+body{
+    font-family: var(--fuentePrincipal);
+    font-size: 1.6rem;
+    line-height: 1.8; /* Distancia de interlineado */
+}
+
+h1, h2, h3{
+    font-weight: 900;
+    margin: 1rem 0 4rem 0;
+}
+
+h1 {
+    font-size: 4.8rem;
+}
+
+h2{
+    font-size: 5.8rem;
+}
+
+h3{
+    font-size: 5rem;
+}
+
+a{
+    text-decoration: none;
+}
+
+img{
+    max-width: 100%; /* para poder hacerlas responsive */
+    display: block; /* evita que tengan la linea en la parte inferior */
+}
+
+.contenedor{
+    max-width: 120rem; /* tamaño maximo del contenedor */
+    margin: 0 auto; /* para que el contenido esté centrado */
+    width: 90%; /* Toma el 90% del tamaño disponible sin pasar del max-width: 120 rem*/
+}
+
+.btn{
+    color: var(--gris);
+    background-color: var(--blanco);
+    border: 1px solid var(--gris);
+    padding: .5rem 2rem;
+    transition: background-color .3s; /* Tiempo que tarda en hacer la transición del :hover*/
+}
+
+.btn:hover{
+    background-color: var(--gris);
+    color: var(--blanco);
+}
+
+/* UTILIDADES */
+.text-center{
+    text-align: center;
+}
+
+.mt-5{ /* clase para definir margen superior */
+    margin-top: 5rem; 
+}
