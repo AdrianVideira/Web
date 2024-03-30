@@ -36,7 +36,8 @@ img {
     max-width: 100%;
     display: block;
 }
-.contenedor {
+
+[class$="__contenedor"] { /* Le aplica los estilos a todas las clases que contengan "__contenedor"*/
     max-width: 120rem;
     margin: 0 auto;
     width: 90%;
@@ -67,12 +68,6 @@ img {
     .header{
         background-size: 100rem;
     }
-}
-
-.header__contenedor{
-    max-width: 120rem;
-    margin: 0 auto;
-    width: 90%;
 }
 
 @media (min-width: 768px) {
@@ -220,5 +215,69 @@ img {
 
 .nucleus__heading{
     margin-top: 0;
+    text-align: center;
+    margin-bottom: 5rem;    
+}
+
+.nucleus__contenedor{
+
+}
+
+.nucleus__contenedor{
+    display: flex;
+    flex-direction: column-reverse;
+}
+
+@media (min-width: 768px) { 
+    .nucleus__contenedor{
+        display: grid;
+        grid-template-columns: 1fr 2fr;
+        gap: 5rem;  
+    }
+}
+
+.nucleus__imagen{
+  margin-top: 6rem;
     
 }
+
+@media (min-width: 768px) { 
+    .nucleus__imagen{
+        margin-top: 0;
+    }
+}
+
+@media (min-width: 768px) { 
+    .nucleus__contenedor:nth-child(2){
+        align-items: center;
+    }
+}
+
+.listado{
+
+}
+
+.listado__elemento{
+    box-shadow: 0px 0px 15px 3px rgb(0 0 0 / .3);
+    padding: 2rem;
+    margin-bottom: 5rem;
+}
+
+.listado__elemento:hover{
+    transform: scale(1.1);
+    transition-property: transform;
+    transition-duration: 0.5s;
+}
+
+.listado__heading{
+    color: var(--primario);
+    font-weight: 900;
+    line-height: 3rem;
+    margin: 1rem 0;
+}
+
+.listado__texto{
+    margin: 0;
+    font-size: 2rem;
+}
+
