@@ -342,7 +342,37 @@ img {
         display: flex;
         flex-direction: column;
         justify-content: center;    
-    }
-
+    }   
 
 }
+
+/* SECTION : COMISIONES */
+.comisiones{
+    background-color: red;
+}
+
+.comisiones__heading{
+    text-align: center;
+    background-color: #6834a6;
+}
+
+.comisiones__grid{    
+    background-color: pink;
+    display: grid;
+    column-gap: 2rem;
+    grid-template-columns: 1fr 1fr;
+}
+
+.comisiones__contenido{          
+    background-color: aqua;
+}
+
+.comisiones__contenido h3 {
+    text-align: center;
+}
+.commisiones__imagen{
+    
+   
+}
+
+
