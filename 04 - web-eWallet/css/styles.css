@@ -86,6 +86,12 @@ img {
     .header__logo{
         margin: 0;
     }
+
+    .header__grid{
+        display: grid;
+        grid-template-columns: repeat(2, 1fr);
+        gap: 4rem;
+    }   
 }
 
 .navegacion{
@@ -143,14 +149,6 @@ img {
         color: var(--negro);
         transition: 0.5s;   
     }    
-}
-
-@media (min-width: 768px) { 
-    .header__grid{
-        display: grid;
-        grid-template-columns: repeat(2, 1fr);
-        gap: 4rem;
-    }
 }
 
 .header__texto{
@@ -271,8 +269,46 @@ img {
 
 .listado__texto{
     margin: 0;
-    font-size: 2rem;
+    font-size: 2.4rem;
 }
+
+.listado__elemento--2col{
+    display: grid;
+    grid-template-rows: repeat(2 1fr);
+    column-gap: 1rem;
+    align-items: center;   
+}
+
+@media (min-width: 768px) { 
+    .listado__elemento--2col{
+        grid-template-columns: 1fr 3fr;
+        column-gap: 1rem;   
+    }
+}
+
+.listado__numero{
+    color: var(--primario);
+    font-size: 6rem;
+    font-weight: 900;
+    text-align: center;
+    margin: 0;
+}
+
+@media (min-width: 768px) { 
+    .listado__numero{
+        color: var(--primario);
+        font-size: 4rem;
+        font-weight: 900;
+        text-align: center;
+    }
+}
+
+
+.listado__texto{
+    text-align: justify;
+    padding: 1rem;
+}
+
 
 /* SECTION : SEGURIDAD */
 .seguridad{
@@ -359,20 +395,51 @@ img {
 .comisiones__grid{    
     background-color: pink;
     display: grid;
-    column-gap: 2rem;
-    grid-template-columns: 1fr 1fr;
+    grid-template-rows: repeat(2 1fr);
+    column-gap: 3rem;
+
 }
+
+@media (min-width: 769px) { 
+    .comisiones__grid{    
+        background-color: pink;
+        display: grid;
+        grid-template-columns: 1fr 1fr;
+        column-gap: 5rem;
+        align-items: flex-end;    
+    }
+}
+
+@media (min-width: 998px) { 
+    .comisiones__grid{    
+        align-items: center;    
+    }
+}
+
 
 .comisiones__contenido{          
     background-color: aqua;
+    display: flex;
+    flex-direction: column;
+    justify-content: center;
+}
+
+.comisiones__texto{
+    text-align: center;
+    font-size: 2.4rem;
+    font-weight: 700;
+}
+
+@media (min-width: 769px) {
+    .comisiones__texto{
+        text-align: left;
+    } 
+    
 }
 
 .comisiones__contenido h3 {
     text-align: center;
 }
-.commisiones__imagen{
-    
-   
-}
+
 
 
