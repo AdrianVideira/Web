@@ -151,6 +151,20 @@ img {
     }    
 }
 
+/* Modificamos el color del enlace de la navegación */
+.navegacion__link--tipo2{
+    color: var(--blanco); 
+    font-weight: 400;
+    padding: 1rem 1rem;
+
+}
+    
+.navegacion__link--tipo2:hover{
+    color: var(--negro);
+}
+
+
+
 .header__texto{
     display: flex;
     flex-direction: column;
@@ -505,5 +519,27 @@ img {
     margin: 0;
 }
 
+/* FOOTER */
 
+.footer{
+    background-color: #5A30A0;
+}
 
+.footer__logo{
+    width: 20rem;
+    margin: auto;
+    padding-top: 2rem;
+    padding-bottom: 2rem;
+}
+  
+@media (min-width: 768px) { 
+    .footer__grid{
+        display: flex;
+        justify-content: space-between;
+        align-items: center;
+    }
+
+    .footer__logo{
+        margin: 0;
+    }
+}
