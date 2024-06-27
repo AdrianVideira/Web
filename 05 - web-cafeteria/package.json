@@ -1,0 +1,14 @@
+{
+  "name": "05---web-cafeteria",
+  "version": "1.0.0",
+  "description": "Primer proyecto con SASS y Gulp",
+  "main": "index.js",
+  "scripts": {
+    "test": "echo \"Error: no test specified\" && exit 1"
+  },
+  "author": "Adrian Videira",
+  "license": "ISC",
+  "devDependencies": {
+    "gulp": "^5.0.0"
+  }
+}
