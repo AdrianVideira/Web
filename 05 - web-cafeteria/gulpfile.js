@@ -9,7 +9,8 @@ const autoprefixer = require('autoprefixer'); // autoprefixer -> sirve para hace
 
 // IMAGENES.
 const imagemin = require('gulp-imagemin');
-const webp = require('gulp-webp');
+//const webp = require('gulp-webp'); //se suprimen por problema de compatibilidad.
+//const avif = require('gulp-avif'); //se suprimen por problema de compatibilidad.
 
 
 //función para compilar archivos scss
@@ -23,18 +24,34 @@ function css(done){
     done();
 }
 
-function versionWebp(done){
-    src('src/img/**/*.{png, jpg}')
-        .pipe( webp())
-        .pipe( dest('build/img'))
-    done();
-}
 
 // función para agregar imagenes a la carpeta build de nuestro proyecto y minificarlas.
 function imagenes(done){
     src('src/img/**/*') // Damos la ruta donde vamos a buscar los archivos.
         .pipe( imagemin({optimizationLevel: 3}))
         .pipe( dest('build/img')) // Damos la ruta de destino para las imágenes
+    done();
+}
+
+//función para convertir imagenes png y jpg a webp
+function versionWebp(done){
+    const opciones = {
+        quality: 50
+    }
+    src('src/img/**/*.{png, jpg}')
+        .pipe( webp(opciones))
+        .pipe( dest('build/img'))
+    done();
+}
+
+//función para convertir imagenes png y jpg a avif
+function versionAvif(done){
+    const opciones = {
+        quality: 50
+    }
+    src('src/img/**/*.{png, jpg}')
+        .pipe( avif(opciones))
+        .pipe( dest('build/img'))
     done();
 }
 
@@ -49,8 +66,9 @@ function dev(){
 exports.css = css; 
 exports.dev = dev;
 exports.imagenes = imagenes;
-exports.versionWebp = versionWebp;
-exports.default = series ( imagenes, versionWebp, css, dev );
+//exports.versionWebp = versionWebp; //se suprimen por problema de compatibilidad.
+//exports.versionAvif = versionAvif; //se suprimen por problema de compatibilidad.
+exports.default = series (imagenes, css, dev );
 
 // series - Se inicia una tarea y hasta que finaliza no empieza la siguiente.
 // parallel - Todas inician a la vez.
