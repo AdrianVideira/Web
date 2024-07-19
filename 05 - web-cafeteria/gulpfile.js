@@ -8,7 +8,7 @@ const postcss = require('gulp-postcss');  // postcss -> sirve para hacer el cód
 const autoprefixer = require('autoprefixer'); // autoprefixer -> sirve para hacer el código compatible con los navegadores que queramos.
 
 // IMAGENES.
-const imagemin = require('gulp-imagemin');
+//const imagemin = require('gulp-imagemin'); //se suprimen por problema de compatibilidad.
 //const webp = require('gulp-webp'); //se suprimen por problema de compatibilidad.
 //const avif = require('gulp-avif'); //se suprimen por problema de compatibilidad.
 
@@ -65,7 +65,7 @@ function dev(){
 // Activamos las funciónes para poder usarlas con la terminal.
 exports.css = css; 
 exports.dev = dev;
-exports.imagenes = imagenes;
+//exports.imagenes = imagenes; //se suprimen por problema de compatibilidad.
 //exports.versionWebp = versionWebp; //se suprimen por problema de compatibilidad.
 //exports.versionAvif = versionAvif; //se suprimen por problema de compatibilidad.
 exports.default = series (imagenes, css, dev );

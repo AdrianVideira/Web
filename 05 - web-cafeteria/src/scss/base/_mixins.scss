@@ -1,0 +1,24 @@
+// En este archivo, creamos los mixin para los bloques de código que se van a usar mucho.
+// Son una buena forma de reutilizar código en las archivos .sass
+@use 'variables' as v;
+
+
+@mixin telefono{
+    @media (min-width: v.$telefono ){
+        //@content -> sirve para indicarle al @media que todo lo que este entre {...} lo inyecte en el @medida.
+        @content;
+    }
+}
+
+@mixin tablet{
+    @media (min-width: v.$tablet){
+        @content;
+    }
+}
+
+@mixin desktop{
+    @media (min-width: v.$desktop){
+        @content;
+    }
+}
+
