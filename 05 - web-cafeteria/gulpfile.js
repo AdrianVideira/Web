@@ -68,7 +68,7 @@ exports.dev = dev;
 //exports.imagenes = imagenes; //se suprimen por problema de compatibilidad.
 //exports.versionWebp = versionWebp; //se suprimen por problema de compatibilidad.
 //exports.versionAvif = versionAvif; //se suprimen por problema de compatibilidad.
-exports.default = series (imagenes, css, dev );
+exports.default = series (css, dev );
 
 // series - Se inicia una tarea y hasta que finaliza no empieza la siguiente.
 // parallel - Todas inician a la vez.

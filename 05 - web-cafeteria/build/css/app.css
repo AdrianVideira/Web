@@ -363,7 +363,7 @@ h3 {
 }
 
 .bg-primario {
-  background-color: #E8505B;
+  background-color: #5e311e;
 }
 
 .header {
@@ -403,6 +403,56 @@ h3 {
   background-image: url(../img/header_inicio.jpg);
 }
 
-.navegacion {
-  color: black;
+.nav-principal {
+  display: flex;
+  flex-direction: column;
+  margin-top: 5rem;
+}
+@media (min-width: 768px) {
+  .nav-principal {
+    flex-direction: row;
+    gap: 1rem;
+    margin-top: 0;
+  }
+}
+.nav-principal a {
+  text-align: center;
+  color: #FFFFFF;
+  font-size: 2rem;
+  text-transform: uppercase;
+  font-weight: 700;
+  margin-bottom: 1rem;
+}
+@media (min-width: 768px) {
+  .nav-principal a {
+    margin-bottom: 0;
+  }
+}
+.nav-principal a:hover {
+  color: #c39c63;
+}
+.nav-principal a.activo {
+  color: #c39c63;
+}
+
+.barra {
+  display: flex;
+  flex-direction: column;
+}
+@media (min-width: 768px) {
+  .barra {
+    flex-direction: row;
+    justify-content: space-between;
+    align-items: center;
+  }
+}
+.barra .logo {
+  width: 50%;
+  margin: 0 auto;
+}
+@media (min-width: 768px) {
+  .barra .logo {
+    width: 20rem;
+    margin: 0;
+  }
 }
