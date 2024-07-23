@@ -1,3 +1,7 @@
 // NOTA: Este formato de hoja de estilos no es leida por el navegador, se necesita compilar previamente para que el navegador la reconozca.
-@use 'base';
+// Usamos la función @use para compilar y usar los archivos incluidos.
+// SASS, busca automáticamente la hoja que se llame index.scss donde hemos inlcuido todos los archivos que necesitemos.
+
+@use 'base'; 
 @use 'header';
+@use 'inicio';

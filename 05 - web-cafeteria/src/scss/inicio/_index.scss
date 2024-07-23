@@ -1,5 +1,4 @@
+//NOTA: El _ en el nombre del archivo indica que este se va a incluir en otro archivo.
 // index.scss - archivo principal, que incluye a otros archivos, nos sirve como índice, mediante la funcióin @forward.
-@forward 'header';
-@forward 'navegacion';
-@forward 'barra';
-@forward 'navegacion';
+
+@forward 'contenido';

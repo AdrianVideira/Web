@@ -1,3 +1,5 @@
+//NOTA: El _ en el nombre del archivo indica que este se va a incluir en otro archivo.
+
 @use 'base/variables' as v;
 @use 'base/mixins' as m;
 @use 'sass:math'; // Importamos las funciones matemáticas que vienen con SASS.

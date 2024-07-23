@@ -1,0 +1,17 @@
+//NOTA: El _ en el nombre del archivo indica que este se va a incluir en otro archivo.
+
+@use 'base/variables' as v;
+@use 'base/mixins' as m;
+
+.contenido-principal{
+    background-color: v.$blanco;
+    padding: 2rem;
+
+    @include m.tablet { 
+        padding: 10rem;
+        margin-top: -10rem;//Superponer el main con la imagen del header.
+        position: relative;//Para traer hacia delante el main y que se superponga con la imagen del header.
+    }
+
+}
+
