@@ -11,7 +11,7 @@ html{
 }
 
 body {
-    font-family: v.$fuente_principal;
+    font-family: v.$fuenteSecundaria;
     font-size: 1.6rem;
     background-color: v.$cafeClaro;
 }
@@ -37,19 +37,11 @@ img{
     display: block;
 }
 
-h1, h2, h3{
-    margin: 0 0 v.$separacion 0;
+ul{
+    list-style: none; //Eliminamos el punto de la lista.
+    padding: 0; // Eliminamos el padding.
+    margin: 0; // Eliminamos el margen.
 }
 
-h1{
-    font-size: 4rem;
-}
 
-h2{
-    font-size: 3.6rem;
-}
-
-h3{
-    font-size: 3.2rem;
-}
 

@@ -1,0 +1,41 @@
+//NOTA: El _ en el nombre del archivo indica que este se va a incluir en otro archivo.
+@use 'variables' as v;
+
+
+h1, h2, h3{
+    font-family: v.$fuentePrincipal;
+    margin: 0 0 v.$separacion 0;
+    text-transform: uppercase;
+    text-align: center;
+    line-height: 1.5;
+}
+
+h1{
+    font-size: 4rem;
+}
+
+h2{
+    font-size: 3.6rem;
+
+    span{
+        color: v.$secundario;
+        font-size: 1.8rem;
+        display: block; // Fuerza el salto de linea.
+    }
+
+    &::after{ 
+        content: ''; // Donde agregaremos la imagen con un background.
+        display: block; // Para poder darle un ancho y un alto.
+        width: 10rem;
+        height: 10rem;
+        margin: 0 auto; // para centrar la imagen en la pantalla.
+        background-image: url(../img/cafe.svg);
+        background-size: 10rem; // Ajustamos el tamaño de la imagen a el bloque creado.
+    }
+
+}
+
+h3{
+    font-size: 3.2rem;
+}
+

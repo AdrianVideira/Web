@@ -1,0 +1,33 @@
+//NOTA: El _ en el nombre del archivo indica que este se va a incluir en otro archivo.
+
+@use 'base/variables' as v;
+@use 'base/mixins' as m;
+
+
+.iconos{
+    margin-top: 5rem;
+
+    .listado-iconos{
+        margin-top: 5rem;
+        @include m.tablet {
+
+            @include m.grid(3, 5rem);            
+        }
+
+      li{
+            img{
+                margin: 0 auto; //Centramos la imagen
+                width: 12rem; // limitamos el tamaño
+            }
+
+            p{
+                font-family: v.$fuenteCursiva;
+                font-size: 3.2rem;
+                color: v.$primario;
+            }
+      }
+
+    }
+
+}
+
