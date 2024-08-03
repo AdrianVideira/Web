@@ -1,0 +1,32 @@
+//NOTA: El _ en el nombre del archivo indica que este se va a incluir en otro archivo.
+
+@use 'base/variables' as v;
+@use 'base/mixins' as m;
+
+
+
+.nuestro-menu{
+    //Agregamos las dos imagenes y incluimos el color de fondo con linear-gradient dandole el mismo color en ambos extremos para que salga uniforme.
+    background-image: url(../img/menu_arriba.svg), url(../img/menu_abajo.svg), linear-gradient(to top, v.$primario, v.$primario);
+    background-repeat: no-repeat; // Evitamos que las imagenes se repitan.
+     // Posicionamos las imagenes. Posicionamos las imagenes separandolas con ",".
+     // Primero situamos la imagen "menu_arriba" en el centro y a 5 rem de la parte de arriba.
+     // Segundo situamos la imagen "menu_abajo" en el centro y al 92% de distancia del la parte de arriba.
+     // Tercero situamos el color de fondo, y ponemos el 100% para evitar que genere una separación en la parte de arriba.
+    background-position: center 5rem , center 92%, 100%;
+    background-size: 200%;
+    padding: 15rem 5rem 20rem 5rem;
+
+
+    @include m.tablet { 
+        padding: 15rem 0 20rem 0;
+        background-size: 100%; //Controlamos el tamaño de las imagenes (todas a la vez).
+    }
+
+    @include m.desktop { 
+        //Controlamos el tamaño de las imagenes, en nuestro caso tenemos tres, pues tres parámetros para cada imagen.
+        //Tamaño primera imagen, tamaños segunda, tamaño color de fondo ( en este caso nos interesa que se mantenga igual).
+        background-size: 50% , 50%, 100%; 
+    }
+
+}

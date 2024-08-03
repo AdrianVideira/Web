@@ -32,7 +32,20 @@ h2{
         background-image: url(../img/cafe.svg);
         background-size: 10rem; // Ajustamos el tamaño de la imagen a el bloque creado.
     }
+}
 
+.heading-blanco{
+    //@extend sirve para heredar todo el css del elemento indicado, funciona como una clase en POO. Así evitamos escribir todo el código.
+    @extend h2;
+    color: v.$blanco;
+
+    span{
+        color: v.$blanco;
+    }
+
+    &::after{
+        display: none;
+    }
 }
 
 h3{
