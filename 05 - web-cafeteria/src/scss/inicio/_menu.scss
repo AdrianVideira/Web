@@ -14,8 +14,8 @@
      // Segundo situamos la imagen "menu_abajo" en el centro y al 92% de distancia del la parte de arriba.
      // Tercero situamos el color de fondo, y ponemos el 100% para evitar que genere una separación en la parte de arriba.
     background-position: center 5rem , center 92%, 100%;
-    background-size: 200%;
-    padding: 15rem 5rem 20rem 5rem;
+    background-size: 200%, 120%;
+    padding: 15rem 2rem 20rem 2rem;
 
 
     @include m.tablet { 
@@ -27,6 +27,42 @@
         //Controlamos el tamaño de las imagenes, en nuestro caso tenemos tres, pues tres parámetros para cada imagen.
         //Tamaño primera imagen, tamaños segunda, tamaño color de fondo ( en este caso nos interesa que se mantenga igual).
         background-size: 50% , 50%, 100%; 
+    }
+
+}
+
+.grid-menu{
+    @include m.tablet { 
+        @include m.grid(2, 3rem)
+    }
+}
+
+.menu{
+    h3{
+        color: v.$blanco;
+    }
+
+    li{
+        display: flex;
+        flex-direction: row;
+        justify-content: space-between;
+        align-items: center;
+        
+        p{
+            color: v.$blanco;
+            font-size: 2.2rem;
+            line-height: 2.5rem;
+            margin: 0 0 2rem 0;
+                       
+            span{
+                color: v.$secundario;
+                display: block; //Para generar el salto de linea.
+            }
+        }
+        .precio{
+            font-size: 4rem;
+            font-weight: 700;
+        }
     }
 
 }
