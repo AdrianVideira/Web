@@ -1,0 +1,47 @@
+// Este archivo SASS inicia con _ porque eso indica que es un archivo que se va a incluir en otro.
+@use 'base/variables' as v;
+@use 'base/mixins' as m;
+
+.contenido-principal{
+  
+
+    .contenido-nosotros{
+
+        @include m.tablet { 
+            display: grid;
+            align-items: center;
+            @include m.grid(2, 1rem)
+        }
+
+        .imagen{
+
+            img{
+                transform: rotate(-6deg);
+                border: 3rem solid v.$blanco;
+                box-shadow: 9px 10px 5px -7px rgb(0 0 0 / .35); //eje X, eje Y, distancia de la sombra 
+            }
+
+        }
+
+        .texto{
+            text-align: center;
+            margin-top: 5rem;
+            padding: 3rem;
+
+            @include m.tablet { 
+                margin-top: 0;
+            }
+
+            blockquote{
+                margin: 0;
+                padding: 1rem;
+                border-left: .5rem solid v.$primario;
+                font-size: 2rem;
+            }
+
+
+        }
+
+    }   
+    
+}
