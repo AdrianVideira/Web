@@ -1,0 +1,62 @@
+// Este archivo SASS inicia con _ porque eso indica que es un archivo que se va a incluir en otro.
+@use 'base/variables' as v;
+@use 'base/mixins' as m;
+
+.proceso-cafe{
+    margin-bottom: v.$separacion;
+
+    @include m.tablet { 
+        display: flex;
+        gap: v.$separacion;
+        align-items: center;
+    }
+    &:last-of-type{
+        margin-bottom: 0;
+    }
+
+    &:nth-child(even){ //"even" incluye todos los elementos pares y "odd" incluye los elementos impares.
+
+        /*.texto{
+            order: -1; // Usamo -1 para mover solamente un elemento en vez de modificar los dos.
+        }*/
+
+        .texto{
+            order: 1; // solo se usa con display flex. ordena los elementos según el número que le hayamos dado.
+        }
+
+        .imagen{
+            order: 2;
+        }
+    }
+
+
+    .imagen,
+    .texto{
+        flex: 1;
+    }
+
+
+    .texto{
+        margin-top: 1rem;
+   
+     
+        h3{
+            margin: 0;
+            text-align: left;
+            color: v.$primario;
+            
+
+            &::after{
+                content: '';
+                display: block;
+                width: 50%;
+                height: 5px;
+                background-color: v.$secundario;
+            }
+
+        }
+
+    }
+
+}
+
