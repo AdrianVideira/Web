@@ -7,3 +7,6 @@
 @use 'footer';
 @use 'inicio';
 @use 'internas';
+
+
+@use 'utilidades'; //Para que se compilen de últimas y así aplicar los estilos concretos aplicados en ellas.
