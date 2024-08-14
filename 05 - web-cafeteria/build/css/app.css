@@ -463,6 +463,10 @@ h3 {
   background: url(../img/header_menu.jpg);
 }
 
+.header-contacto {
+  background: url(../img/header_contacto.jpg);
+}
+
 .nav-principal {
   display: flex;
   flex-direction: column;
